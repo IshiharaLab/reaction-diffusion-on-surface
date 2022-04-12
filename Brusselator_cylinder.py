@@ -141,7 +141,7 @@ for tt in range(Time):
         print('%.2f %f %f' % (tt*dt,np.max(U),np.min(U),)) # for check
 
     Brusselator(U,V,fU,fV,a,b)
-    V[:] += dt*( Dv*Lap_csr.dot(V)[:] + fV[:] )
     U[:] += dt*( Du*Lap_csr.dot(U)[:] + fU[:] )
-
+    V[:] += dt*( Dv*Lap_csr.dot(V)[:] + fV[:] )
+    
 np.savez_compressed('Brusselator_cyliderical_gamma='+str(gamma), U_time, V_time)
