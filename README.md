@@ -21,6 +21,7 @@ For Laplacian on triangular mesh, we used discretization used in Ref. [2].
 Run scripts Brusselator_cylinder.py and Brusselator_sphere.py on IDE or IPython.
 Model parameters can be changed by editing these scripts.
 
+$a333\sin$
 
 ## Licence
 
