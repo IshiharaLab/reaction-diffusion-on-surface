@@ -1,8 +1,8 @@
 """
 - Solve Reaction-Diffusion equations of Brusselator on an axisymetric surface.
-- Cylindrical coordinate ([0,4\pi) x [0<2\pi) ) with periodic boundary condition.
-- Surface shape is given by a radial function r(x) = d + k1 cos(x) + k2 cos(2*x-gamma*pi/2).
-  When k1 =0 and k2 = 0, the surface is a simple cylinder.
+- Cylindrical coordinate with periodic boundary condition.
+- Surface shape is given by a radial function r(x) = d + k1 cos(x) + k2 cos(2x-gamma pi/2).
+  When k1 = 0 and k2 = 0, the surface is a simple cylinder.
 - Laplace-Beltrami operator is discretized by the finite differential method.
 - Explicit Euler scheme for time evolution.
 - Parameters (you can change them in the section "model parameters").
@@ -11,12 +11,13 @@
 
 See [1] for details.
     1. Ryosuke Nishide and Shuji Ishihara
-    "Pattern Propagation Driven by Surface Curvature" (2021)
+    "Pattern Propagation Driven by Surface Curvature" (2022)
 
 """
 
 import numpy as np
 import scipy.sparse as sparse
+import matplotlib
 import matplotlib.pyplot as plt
 
 
