@@ -28,7 +28,7 @@ Model parameters can be changed by editing these scripts.
 
 ## References
 
-1. Ryosuke Nishide and Shuji Ishihara <br>
+1. R. Nishide and S. Ishihara <br>
 "Pattern Propagation Driven by Surface Curvature" (2022) <br>
 
 2. G. Xu <br>
