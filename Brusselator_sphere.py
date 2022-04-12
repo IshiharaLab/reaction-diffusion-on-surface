@@ -3,7 +3,7 @@
 - Polar coordinate
 - Surface shape is given by a radial function R(theta,phi) = R + k( cos(2theta)-1)cos(theta) .
   When k = 0, the surface is a perfect sphere.
-- Surface discretzation by triangular mesh: spherical_mesh.py.
+- Surface discretization by triangular mesh: spherical_mesh.py.
 - Laplace-Beltrami operator follows [2]
 - Explicit Euler scheme for update.
 - Parameters (you can change them in the section "model parameters").
