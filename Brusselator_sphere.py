@@ -1,17 +1,17 @@
 """
-- Solve Reaction-Diffusion equations of Brusselator on an spherical surface, see Ref.[1] for details.
+- Solve Reaction-Diffusion equations of Brusselator on a spherical surface, see Ref.[1] for details.
 - Polar coordinate
-- Surface shape is given by a radial function R(theta,phi) = R + k( cos(2theta)-1)cos(theta) .
+- Surface shape is given by a radial function r(theta,phi) = R + k( cos(2theta)-1)cos(theta) .
   When k = 0, the surface is a perfect sphere.
 - Surface discretization by triangular mesh: spherical_mesh.py.
 - Laplace-Beltrami operator follows [2]
-- Explicit Euler scheme for update.
+- Explicit Euler scheme for time evolution.
 - Parameters (you can change them in the section "model parameters").
     Parameters for the reaction diffusion equations: a, b, Du, Dv
     Parameters for the surface shape : N, R, k   (N controls the size of mesh)
 
     1. Ryosuke Nishide and Shuji Ishihara
-    "Pattern Propagation Driven by Surface Curvature" (2021)
+    "Pattern Propagation Driven by Surface Curvature" (2022)
 
     2. G. Xu
     "Discrete Laplace-Beltrami operator on sphere and optimal spherical triangulations"
@@ -19,12 +19,10 @@
 
 """
 
-import time
+#import time
 import numpy as np
 import scipy.sparse as sparse
-import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
 import spherical_mesh
 
