@@ -1,10 +1,10 @@
 """
 - Solve Reaction-Diffusion equations of Brusselator on an axisymetric surface.
 - Cylindrical coordinate ([0,4\pi) x [0<2\pi) ) with periodic boundary condition.
-- Surface shape is given by radial function r(x) = d + k1 cos(x) + k2*cos(2*x-gamma*pi/2).
+- Surface shape is given by a radial function r(x) = d + k1 cos(x) + k2 cos(2*x-gamma*pi/2).
   When k1 =0 and k2 = 0, the surface is a simple cylinder.
 - Laplace-Beltrami operator is discretized by the finite differential method.
-- Explicit Euler scheme for update.
+- Explicit Euler scheme for time evolution.
 - Parameters (you can change them in the section "model parameters").
     Parameters for the reaction diffusion equations: a, b, Du, Dv
     Parameters for the surface shape : d, k1, k2, gamma
@@ -15,12 +15,10 @@ See [1] for details.
 
 """
 
-import time
 import numpy as np
 import scipy.sparse as sparse
-import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
+
 
 """
 model, reaction part
